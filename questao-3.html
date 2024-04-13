@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //9- Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1.Adição, 2.Subtração, 3.Divisão, 4.Multiplicação).O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos.
+
+        function calcularOperacao(valor1, valor2, operacao) {
+            switch (operacao) {
+                case 1:
+                    return valor1 + valor2;
+                case 2:
+                    return valor1 - valor2;
+                case 3:
+                    if (valor2 !== 0) {
+                        return valor1 / valor2;
+                    } else {
+                        return "Divisão por zero não é permitida!";
+                    }
+                case 4:
+                    return valor1 * valor2;
+                default:
+                    return "Operação inválida!";
+            }
+        }
+
+        let valor1 = parseInt(prompt("Digite o primeiro valor inteiro: "));
+        let valor2 = parseInt(prompt("Digite o segundo valor inteiro: "));
+        let operacao = parseInt(prompt("Digite o código da operação (1: Adição, 2: Subtração, 3: Divisão, 4: Multiplicação): "));
+
+        let resultado = calcularOperacao(valor1, valor2, operacao);
+        alert(`O resultado da operação é: ${resultado}`);
+    </script>
+</body>
+</html>
